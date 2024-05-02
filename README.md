@@ -14,6 +14,7 @@ The project aims to cover 5 main sub-tasks which have been covered both individu
 * The project runs on a streamlit server which provides and interactive dropdown for switching between different filters which are applied to the real-time vedio feed shown on the local host server.
 * For segmentation which an important apsect of tasks like background blur, background replace and cartoonization i used segmentation model called "PP-HumanSeg" for Human Segmentaion mask from opencv_zoo (link : https://github.com/opencv/opencv_zoo).
 * As the project runs on embedded system i used the onnx version which works better on nano's gpu. Morover i used the PP-HumanSeg only for mask extraction and then i wrote custom python script for pixel replacement and overlay so that the filter effects are real-time.
+* Also attaching an version 1 approach for background bluring and replacement using countours detection and highest countour drawing to identify objects (humans in our case) and draw and countour around the detected object so that it acts as a mask. (This approach works but is heavily dependent on lighting condition and camera quality. Moreover it is also dependednt on clothing colour of humans because it involves processing on grey scale images.)
 * Finally the whole project uses opencv for image processing and i have used harcascades for face detection and replacement with mask for two tasks namely "Face Distortion" and "Face Masking".
 
 ### Files added for project
